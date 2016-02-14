@@ -1,4 +1,4 @@
-From db746d1ca0c41fe3da103d09fc240a0df9db5404 Mon Sep 17 00:00:00 2001
+From 58b5229e17ac81217549cd388ca0ce35424aa361 Mon Sep 17 00:00:00 2001
 From: Martin Jansa <Martin.Jansa@gmail.com>
 Date: Sat, 27 Apr 2013 23:15:37 +0200
 Subject: [PATCH 04/10] qt_module: Fix pkgconfig and libtool replacements
@@ -67,7 +67,7 @@ Signed-off-by: Andreas Müller <schnitzeltony@googlemail.com>
  2 files changed, 17 insertions(+), 1 deletion(-)
 
 diff --git a/mkspecs/features/qt_common.prf b/mkspecs/features/qt_common.prf
-index 38602f6..f9c401f 100644
+index 0730084..333bb97 100644
 --- a/mkspecs/features/qt_common.prf
 +++ b/mkspecs/features/qt_common.prf
 @@ -38,7 +38,7 @@ contains(TEMPLATE, .*lib) {
@@ -80,10 +80,10 @@ index 38602f6..f9c401f 100644
      lib_replace.CONFIG = path
      QMAKE_PRL_INSTALL_REPLACE += lib_replace
 diff --git a/mkspecs/features/qt_module.prf b/mkspecs/features/qt_module.prf
-index aefd3ae..775cda2 100644
+index bb28af9..1f16f8d 100644
 --- a/mkspecs/features/qt_module.prf
 +++ b/mkspecs/features/qt_module.prf
-@@ -276,6 +276,22 @@ load(qt_targets)
+@@ -277,6 +277,22 @@ load(qt_targets)
          ltlib_replace.replace = $$QMAKE_LIBTOOL_LIBDIR
      ltlib_replace.CONFIG = path
      QMAKE_LIBTOOL_INSTALL_REPLACE += ltlib_replace
